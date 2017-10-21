@@ -29,128 +29,129 @@ var unansweredCounter = 0;
 
 // let the game(s) begin
 
-$(document).ready(function() {
-            $("#quizDiv").hide(); // game starts w/ hidden divs
-            $("#resolutionDiv").hide();
+$(document).ready(function () {
+    $("#quizDiv").hide(); // game starts w/ hidden divs
+    $("#resolutionDiv").hide();
 
 
-            $("#startButton").on("click", function() { // this initializes the start page / button
-console.log("start button works");
-                $("#startDiv").hide();
+    $("#startButton").on("click", function () { // this initializes the start page / button
+        console.log("start button works");
+        $("#startDiv").hide();
+        // $("#startDiv").fadeOut("slow");
+        // $("#quizDiv").show();
+        $("#quizDiv").fadeIn("slow");
 
-                $("#quizDiv").show();
-
-                startTimeclock();
-                return;
-            });
-
-
-            function timeclock() { // initialize & displays counter 
-                count--; // the actual deincrementation of the timeclock
-
-                $('#timerValue').html(count + " seconds"); // sets counter value in html
-
-                $("#finishedButton").on("click", function () { // if you hit finished button before time is up.
-                  console.log("finish button works");
-                    count = 0;
-                    return;
+        startTimeclock();
+        return;
+    });
 
 
-                });
+    function timeclock() { // initialize & displays counter 
+        count--; // the actual deincrementation of the timeclock
 
-                if (count == -1) {
-                    timesUp();
-                    $("#quizDiv").hide();
-                }
+        $('#timerValue').html(count + " seconds"); // sets counter value in html
 
-            }
-
-            function startTimeclock() {
-                setInterval(timeclock, 1000);
-            }
+        $("#finishedButton").on("click", function () { // if you hit finished button before time is up.
+            console.log("finish button works");
+            count = 0;
+            return;
 
 
-
-
-            function timesUp() {
-                var one = $('input:radio[name="one"]:checked').val();
-                var two = $('input:radio[name="two"]:checked').val();
-                var three = $('input:radio[name="three"]:checked').val();
-                var four = $('input:radio[name="four"]:checked').val();
-
-                console.log(one);
-                console.log(two);
-                console.log(three);
-                console.log(four);
-
-                if (one == undefined) {
-                    unansweredCounter++;
-                } else if (one == "Maine") {
-                    correctCounter++;
-                } else {
-                    incorrectCounter++;
-                }
-
-                if (two == undefined) {
-                    unansweredCounter++;
-                } else if (two == "South Dakota") {
-                    correctCounter++;
-                } else {
-                    incorrectCounter++;
-                }
-
-                if (three == undefined) {
-                    unansweredCounter++;
-                } else if (three == "Florida") {
-                    correctCounter++;
-                } else {
-                    incorrectCounter++;
-                }
-
-                if (four == undefined) {
-                    unansweredCounter++;
-                } else if (four == "Utah") {
-                    correctCounter++;
-                } else {
-                    incorrectCounter++;
-                }
-
-                $('#correct').html(correctCounter);
-                $('#incorrect').html(incorrectCounter);
-                $('#unanwsered').html(unansweredCounter);
-
-                $('#resolutionDiv').show();
-
-
-
-            }
         });
 
+        if (count == -1) {
+            timesUp();
+            $("#quizDiv").hide();
+        }
+
+    }
+
+    function startTimeclock() {
+        setInterval(timeclock, 1000);
+    }
 
 
 
 
-        // var questions = [{
-        //         question: "what company logo uses the color brown?",
-        //         guesses: ["Nike", "Pizza Hut", "Netflix", "UPS"],
-        //         answer: 3,
-        //     },
-        //     {
-        //         question: "what company logo uses the color red?",
-        //         guesses: ["FedEx", "Skype", "Netflix", "Blogger"],
-        //         answer: 2,
-        //     },
+    function timesUp() {
+        var one = $('input:radio[name="one"]:checked').val();
+        var two = $('input:radio[name="two"]:checked').val();
+        var three = $('input:radio[name="three"]:checked').val();
+        var four = $('input:radio[name="four"]:checked').val();
 
-        //     {
-        //         question: "what company logo uses the color blue?",
-        //         guesses: ["Twitter", "Starbucks", "Hallmark", "BBC"],
-        //         answer: 0,
-        //     },
+        console.log(one);
+        console.log(two);
+        console.log(three);
+        console.log(four);
 
-        //     {
-        //         question: "what company logo uses the color purple?",
-        //         guesses: ["Target", "Yahoo", "Nikon", "Vimeo"],
-        //         answer: 1,
+        if (one == undefined) {
+            unansweredCounter++;
+        } else if (one == "Maine") {
+            correctCounter++;
+        } else {
+            incorrectCounter++;
+        }
 
-        //     }
-        // ];
+        if (two == undefined) {
+            unansweredCounter++;
+        } else if (two == "South Dakota") {
+            correctCounter++;
+        } else {
+            incorrectCounter++;
+        }
+
+        if (three == undefined) {
+            unansweredCounter++;
+        } else if (three == "Florida") {
+            correctCounter++;
+        } else {
+            incorrectCounter++;
+        }
+
+        if (four == undefined) {
+            unansweredCounter++;
+        } else if (four == "Utah") {
+            correctCounter++;
+        } else {
+            incorrectCounter++;
+        }
+
+        $('#correct').html(correctCounter);
+        $('#incorrect').html(incorrectCounter);
+        $('#unanwsered').html(unansweredCounter);
+
+        $('#resolutionDiv').fadeIn("slow");
+
+       
+
+    }
+});
+
+
+
+
+
+// var questions = [{
+//         question: "what company logo uses the color brown?",
+//         guesses: ["Nike", "Pizza Hut", "Netflix", "UPS"],
+//         answer: 3,
+//     },
+//     {
+//         question: "what company logo uses the color red?",
+//         guesses: ["FedEx", "Skype", "Netflix", "Blogger"],
+//         answer: 2,
+//     },
+
+//     {
+//         question: "what company logo uses the color blue?",
+//         guesses: ["Twitter", "Starbucks", "Hallmark", "BBC"],
+//         answer: 0,
+//     },
+
+//     {
+//         question: "what company logo uses the color purple?",
+//         guesses: ["Target", "Yahoo", "Nikon", "Vimeo"],
+//         answer: 1,
+
+//     }
+// ];
