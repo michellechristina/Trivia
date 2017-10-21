@@ -22,17 +22,67 @@
 
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
 
-    <link href="https://fonts.googleapis.com/css?family=Sail" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Cabin+Sketch" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Slabo+27px" rel="stylesheet">
 
 </head>
 </head>
 <body>
     
-<div id="quiz"></div>
-<div class='button' id='replaybutton'>Play Again?</div>
-<div id="finished"> Time's Up!</div>
-<div id="timeclock">Time Left: <div id="counter">60</div></div>
+    <div class="container boxes" id = "startDiv">
+            <h1> National Park Trivia</h1>
+            <p> Can you guess which state each park is located? </p>
+        <button id = "startButton"> Let's Begin</button>
+    </div>
+
+
+<div class="container boxes" id="quizDiv">
+        <h1> National Park Trivia</h1>
+        <p> Can you guess which state each park is located? </p>
+
+       <div id="time"> <h2> Time Left: <span id="timerValue">60 Seconds</span></h2></div>
+
+<h2>Acadia National Park</h2>
+<input type="radio" name="one" value="Colorado">Colorado
+<input type="radio" name="one" value="Maine">Maine
+<input type="radio" name="one" value="Vermont">Vermont
+<input type="radio" name="one" value="Idaho">Idaho
+
+<h2>The Badlands</h2>
+<input type="radio" name="two" value="value1">Virginia
+<input type="radio" name="two" value="South Dakota">South Dakota
+<input type="radio" name="two" value="Minnesota">Minnesota
+<input type="radio" name="two" value="Oregon">Oregon
+
+<h2>The Everglades</h2>
+<input type="radio" name="three" value="Georgia">Georgia
+<input type="radio" name="three" value="Florida">Florida
+<input type="radio" name="three" value="North Carolina">North Carolina
+<input type="radio" name="three" value="Texas">Texas
+
+<h2> Zion National Park</h2>
+<input type="radio" name="four" value="Nevada">Nevada
+<input type="radio" name="four" value="Utah">Utah
+<input type="radio" name="four" value="North Dakota">North Dakota
+<input type="radio" name="four" value="Virginia">Virginia
+
+<p>
+    <button id ="finishedButton">Finished!</button>
+</p>
+
+</div>
+
+<div class="container boxes" id="resolutionDiv">
+        <h1> National Park Trivia Results</h1>
+<div id="results">
+        <h2>Correct Answers: <span id="correct">0</span></h2>
+        <h2>incorrect Answers: <span id="incorrect">0</span></h2>
+        <h2>Unanswered Questions: <span id="unanwsered">0</span></h2>
+</div>
+</div>
+
+
+
 
 
     <script src="assets/js/app.js"></script>
