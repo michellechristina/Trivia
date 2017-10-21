@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>National Parks Trivia</title>
 
-   
+
     <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
@@ -14,11 +15,11 @@
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
         crossorigin="anonymous"></script>
-    
+
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
         crossorigin="anonymous">
 
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
 
@@ -27,59 +28,62 @@
 
 </head>
 </head>
+
 <body>
-    
-    <div class="container boxes" id = "startDiv">
-            <h1> National Park Trivia</h1>
-            <p> Can you guess which state each park is located? </p>
-        <button id = "startButton"> Let's Begin</button>
+
+    <div class="container boxes" id="startDiv">
+        <h1> National Park Trivia</h1>
+        <p> Can you guess which state each park is located? </p>
+        <button id="startButton"> Let's Begin</button>
     </div>
 
 
-<div class="container boxes" id="quizDiv">
+    <div class="container boxes" id="quizDiv">
         <h1> National Park Trivia</h1>
         <p> Can you guess which state each park is located? </p>
 
-       <div id="time"> <h2> Time Left: <span id="timerValue">60 Seconds</span></h2></div>
+        <div id="time">
+            <h2> Time Left: <span id="timerValue">60 Seconds</span></h2>
+        </div>
 
-<h2>Acadia National Park</h2>
-<input type="radio" name="one" value="Colorado">Colorado
-<input type="radio" name="one" value="Maine">Maine
-<input type="radio" name="one" value="Vermont">Vermont
-<input type="radio" name="one" value="Idaho">Idaho
+        <h2>Acadia National Park</h2>
+        <input type="radio" name="one" value="Colorado">Colorado
+        <input type="radio" name="one" value="Maine">Maine
+        <input type="radio" name="one" value="Vermont">Vermont
+        <input type="radio" name="one" value="Idaho">Idaho
 
-<h2>The Badlands</h2>
-<input type="radio" name="two" value="value1">Virginia
-<input type="radio" name="two" value="South Dakota">South Dakota
-<input type="radio" name="two" value="Minnesota">Minnesota
-<input type="radio" name="two" value="Oregon">Oregon
+        <h2>The Badlands</h2>
+        <input type="radio" name="two" value="value1">Virginia
+        <input type="radio" name="two" value="South Dakota">South Dakota
+        <input type="radio" name="two" value="Minnesota">Minnesota
+        <input type="radio" name="two" value="Oregon">Oregon
 
-<h2>The Everglades</h2>
-<input type="radio" name="three" value="Georgia">Georgia
-<input type="radio" name="three" value="Florida">Florida
-<input type="radio" name="three" value="North Carolina">North Carolina
-<input type="radio" name="three" value="Texas">Texas
+        <h2>The Everglades</h2>
+        <input type="radio" name="three" value="Georgia">Georgia
+        <input type="radio" name="three" value="Florida">Florida
+        <input type="radio" name="three" value="North Carolina">North Carolina
+        <input type="radio" name="three" value="Texas">Texas
 
-<h2> Zion National Park</h2>
-<input type="radio" name="four" value="Nevada">Nevada
-<input type="radio" name="four" value="Utah">Utah
-<input type="radio" name="four" value="North Dakota">North Dakota
-<input type="radio" name="four" value="Virginia">Virginia
+        <h2> Zion National Park</h2>
+        <input type="radio" name="four" value="Nevada">Nevada
+        <input type="radio" name="four" value="Utah">Utah
+        <input type="radio" name="four" value="North Dakota">North Dakota
+        <input type="radio" name="four" value="Virginia">Virginia
 
-<p>
-    <button id ="finishedButton">Finished!</button>
-</p>
+        <p>
+            <button id="finishedButton">Finished!</button>
+        </p>
 
-</div>
+    </div>
 
-<div class="container boxes" id="resolutionDiv">
+    <div class="container boxes" id="resolutionDiv">
         <h1> National Park Trivia Results</h1>
-<div id="results">
-        <h2>Correct Answers: <span id="correct">0</span></h2>
-        <h2>incorrect Answers: <span id="incorrect">0</span></h2>
-        <h2>Unanswered Questions: <span id="unanwsered">0</span></h2>
-</div>
-</div>
+        <div id="results">
+            <h2>Correct Answers: <span id="correct">0</span></h2>
+            <h2>incorrect Answers: <span id="incorrect">0</span></h2>
+            <h2>Unanswered Questions: <span id="unanwsered">0</span></h2>
+        </div>
+    </div>
 
 
 
@@ -87,6 +91,5 @@
 
     <script src="assets/js/app.js"></script>
 </body>
+
 </html>
-
-
